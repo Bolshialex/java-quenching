@@ -48,7 +48,6 @@ public class Practice {
             else if(word.length() < shortest.length()) shortest = word;
             else if(word.length() == shortest.length()){
                 if(word.compareTo(shortest) < 0) shortest = word;
-                
             }
         }
 
