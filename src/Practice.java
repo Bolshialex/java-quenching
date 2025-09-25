@@ -171,8 +171,15 @@ public class Practice {
      * @return the sum of the nodes at the given level
      */
     public static int sumAtLevel(BinaryTreeNode<Integer> root, int level) {
+        return sumAtLevel(root, level,1);
+    }
 
-        return 0;
+    private static int sumAtLevel(BinaryTreeNode<Integer> root, int level, int curLvl){
+        if(root == null) return 0;
+
+        if(curLvl == level) return root.data;
+
+        return sumAtLevel(root.left, level, curLvl+1) + sumAtLevel(root.right, level, curLvl+1);
     }
 
 
